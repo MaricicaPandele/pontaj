@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Teachers list</title>
+<div th:replace="fragments/header :: header-css" />
+</head>
+<body>
+	<div th:replace="fragments/header :: header" />
+
+	<div th:switch="${mode}">
+		
+		<p th:case="'listPontaj'">
+		<div th:replace="fragments/PontajList :: list" />
+		</p>
+		<div th:switch="${mode}">
+			<p th:case="'addPontaj'">
+			<div th:replace="fragments/AddPontaj :: add" />
+			</p>
+		</div>
+
+	</div>
+
+	<div th:replace="fragments/footer :: footer" />
+
+</body>
+</html>

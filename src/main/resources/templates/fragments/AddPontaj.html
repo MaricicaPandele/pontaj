@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Add Pontaj</title>
+</head>
+<body>
+
+<div th:fragment="add">
+ <div class="container">
+ <div class="form-group">
+               <div class="col-xs-12" style="height:50px;"></div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12" style="height:50px;"></div>
+            </div>
+            
+	      <div class="row">
+            <form action = "/addPontaj">
+            <p> Pontaj Nou: </p>
+               <div class="row">
+                  
+               </div>
+               <div class="row">
+                  <div class="col-xs-12" style="height:5px;"></div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-3">          
+                     <input  type="text" class="form-control" id="${pontaj.zi}" placeholder="Day" name="zi" required="true"/>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-12" style="height:5px;"></div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-3">          
+                     <input type="datetime" class="form-control" id="${pontaj.startDate}" placeholder="Start Date" name="startDate" required="true"/>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-12" style="height:5px;"></div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-3">          
+                     <input  type="datetime" class="form-control" id="${pontaj.endDate}" placeholder="End Date" name="endDate" required="true"/>
+                  </div>
+               </div>
+               
+               <div class="row">
+                  <div class="col-xs-12" style="height:5px;"></div>
+               </div>
+
+               <div class="row">
+                  <div class="col-xs-3">
+                     <input type="submit" class="btn btn-info" id="createBtn" value="OK"/>
+                  </div>
+                
+               </div>
+            </form>
+         </div>
+
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>

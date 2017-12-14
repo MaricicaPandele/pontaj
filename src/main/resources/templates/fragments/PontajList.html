@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Lista Pontaj</title>
+</head>
+<body>
+<div th:fragment="list">
+ <div class="container">
+<table class="table" style="width: auto;">
+   <thead>
+     <tr>
+       <th class="col-md-1">No</th>
+       <th class="col-md-1">Day</th> 
+       <th class="col-md-1">Start Date</th>
+       <th class="col-md-1">End Date</th>
+       <th class="col-md-1">Diff</th>
+     </tr>
+   </thead>
+   <tbody>
+   
+   <th:block th:each="element : ${list}">
+	     <tr>
+	       <td th:text="${#ids.seq('')} "></td>
+	       <td th:text="${element.zi}"></td>
+	       <td th:text="${element.startDate}"></td>	       
+	       <td th:text="${element.endDate}"></td>
+	       <td th:text="${element.endDate}"></td>
+	        
+	     </tr>
+	</th:block>
+   
+   </tbody>
+ </table>
+</div>
+ <a  th:href="@{/savePontaj}" > <button type="button" class="btn btn-default"><span class="btn btn-primary">ADD</span></button></a>
+</div>
+</body>
+</html>
